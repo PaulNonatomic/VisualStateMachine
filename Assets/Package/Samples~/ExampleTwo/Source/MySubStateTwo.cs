@@ -18,7 +18,7 @@ namespace Samples.ExampleTwo.Source
 		{
 			if (Time.time - _entryTime > _duration)
 			{
-				Controller.Complete();
+				StateMachineCore.Complete(this);
 			}
 		}
 

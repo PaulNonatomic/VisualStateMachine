@@ -18,7 +18,7 @@ namespace Samples.ExampleTwo.Source
 		
 		public override void EnterState()
 		{
-			_duration = Controller.GetComponent<Duration>().DurationTime;
+			_duration = StateMachineCore.Root.GetComponent<Duration>().DurationTime;
 			_remainingTime = _duration;
 		}
 

@@ -33,7 +33,7 @@ namespace ExampleOne.States
 
 		private void PurchaseItem(string itemId)
 		{
-			Controller.GetComponent<MenuStateMachineData>().PuchaseItemId = itemId;
+			StateMachineCore.Root.GetComponent<MenuStateMachineData>().PuchaseItemId = itemId;
 			OnPurchaseItem?.Invoke();
 		}
 	}

@@ -19,7 +19,7 @@ namespace Samples.ExampleTwo.Source
 		
 		public override void EnterState()
 		{
-			_references = this.Controller.GetComponentInParent<StateMachineReferences>();
+			_references = StateMachineCore.Root.GetComponentInParent<StateMachineReferences>();
 			_entryTime = Time.time;
 		}
 

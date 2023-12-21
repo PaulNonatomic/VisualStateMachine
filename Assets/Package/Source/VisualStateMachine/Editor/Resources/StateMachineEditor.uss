@@ -142,10 +142,18 @@
     width: auto;
     padding-bottom: 5px;
     padding-top: 5px;
+    max-height: 200px;
 }
 
 #property-container.has-properties {
     width: auto;
+}
+
+#property-container.has-properties #unity-content-viewport{
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:2px;
+    padding-right:2px;
 }
 
 #property-container.relay {

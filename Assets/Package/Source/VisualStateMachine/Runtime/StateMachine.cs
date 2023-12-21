@@ -206,12 +206,19 @@ namespace VisualStateMachine
 		{
 			DevLog.Log("StateMachine.OnTransition");
 			var nextNode = _nodeLookup[connection.ToNodeId];
-			Transition(nextNode, connection.PortData.FrameDelay);
+			TriggerAsyncTransition(nextNode, connection.PortData.FrameDelay);
 		}
 
-		private void Transition(StateNode nextNode, int frameDelay = 0)
+		private async void TriggerAsyncTransition(StateNode nextNode, int frameDelay = 0)
 		{
-			TransitionAsync(nextNode, frameDelay).ConfigureAwait(false);
+			try
+			{
+				await TransitionAsync(nextNode, frameDelay).ConfigureAwait(false);
+			}
+			catch (Exception ex)
+			{
+				throw;
+			}
 		}
 
 		private async Task TransitionAsync(StateNode nextNode, int frameDelay = 0)
@@ -250,7 +257,7 @@ namespace VisualStateMachine
 			var nextNode = _jumpNodeLookup[jumpId];
 			if (nextNode == null) return;
 
-			Transition(nextNode);
+			TriggerAsyncTransition(nextNode);
 		}
 		
 		#endregion

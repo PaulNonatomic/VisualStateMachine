@@ -45,9 +45,12 @@ namespace VisualStateMachine.Editor.Nodes
 
 			if (stateNode.State != null)
 			{
+				var scrollView = new ScrollView();
+				propertyContainer.Add(scrollView);
+				
 				var stateInspector = StateMachineNodeFactory.CreateUIElementInspector(stateNode.State);
 				stateInspector.name = "state-inspector";
-				propertyContainer.Add(stateInspector);
+				scrollView.contentContainer.Add(stateInspector);
 				
 				if (stateInspector.childCount > 0)
 				{

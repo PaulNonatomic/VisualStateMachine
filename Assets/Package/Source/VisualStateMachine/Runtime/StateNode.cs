@@ -110,7 +110,8 @@ namespace VisualStateMachine
 		public void FixedUpdate()
 		{
 			if (!_isActive) return;
-			
+
+			_lastActive = Time.time;
 			State.FixedUpdateState();
 		}
 
@@ -118,6 +119,7 @@ namespace VisualStateMachine
 		{
 			ToggleConnectionSubscription(subscribe: false);
 			_isActive = false;
+			_lastActive = Time.time;
 			State.ExitState();
 		}
 
