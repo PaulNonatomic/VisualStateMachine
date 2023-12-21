@@ -1,25 +1,25 @@
 ﻿{
-  "name": "com.nonatomic.visualstatemachine",
-  "version": "0.8.4-beta",
-  "displayName": "Nonatomic Visual StateMachine",
+  "name": "com.immersivegamebox.visualstatemachine",
+  "version": "0.8.6-beta",
+  "displayName": "Visual StateMachine",
   "description": "Visual StateMachine",
   "unity": "2022.3",
   "unityRelease": "1f1",
-  "documentationUrl": "https://github.com/PaulNonatomic/VisualStateMachine/blob/develop/Assets/Package/README.md",
-  "changelogUrl": "https://github.com/PaulNonatomic/VisualStateMachine/blob/develop/Assets/Package/CHANGELOG.md",
+  "documentationUrl": "https://https://github.com/electricplaybox/igb-sdk-vsm/blob/develop/Assets/Package/README.md",
+  "changelogUrl": "https://https://github.com/electricplaybox/igb-sdk-vsm/blob/develop/Assets/Package/CHANGELOG.md",
   "keywords": [
     "Visual",
     "StateMachine"
   ],
   "author": {
-    "name": "Nonatomic",
+    "name": "IGB",
     "email": "paul@nonatomic.co.uk",
-    "url": "https://nonatomic.co.uk/"
+    "url": "https://www.immersivegamebox.com/"
   },
   "type": "tool",
   "repository": {
     "type": "git",
-    "url": "git@github.com:PaulNonatomic/VisualStateMachine.git"
+    "url": "git@github.com:electricplaybox/igb-sdk-vsm.git"
   },
   "samples": [
     {

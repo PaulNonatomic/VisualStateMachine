@@ -1,10 +1,16 @@
 ﻿# Change Log
 
-## [0.8.4-beta] - Dec 21, 2023
-- Added a scroll panel to the StateNodeView so nodes don't get too big when the property list expands. Also solves the issue of the node boundary growing bizarly large when a list is added to the property container
+## [0.8.6-beta] - Dec 21, 2023
+- Fix for errors being supressed by not awaiting an async method
 
-## [0.8.3-beta] - Dec 18, 2023
-- Merged in PR from IGB for Added amends to stabilise the State Machine Editor and reduce the risk of accidental deletions and errors
+## [0.8.5-beta] - Dec 21, 2023
+- Merged in upstream: Added a scroll panel to the StateNodeView so nodes don't get too big when the property list expands. Also solves the issue of the node boundary growing bizarly large when a list is added to the property container
+
+## [0.8.4-beta] - Dec 18, 2023
+-  Added amends to stabilise the State Machine Editor and reduce the risk of accidental deletions and errors
+
+## [0.8.3-beta] - Dec 17, 2023
+- merged upstream
 
 ## [0.8.2-beta] - Dec 17, 2023
 - Fix for null StateMachine when attempting to fix a null statemachine. Stupid!
@@ -16,19 +22,26 @@
 ## [0.8.0-beta] - Dec 14, 2023
 - Breaking change renamed InitializeState to AwakeState and added StartState
 
+## [0.7.15-beta] - Dec 14, 2023
 ## [0.7.14-beta] - Dec 14, 2023
 - Prevented state initialization from being called if application not running
 
-## [0.7.13-beta] - Dec 14, 2023
+## [0.7.14-beta] - Dec 14, 2023
+- merged upstream
 - Added a DestroyState method to States to allow for cleanup when the StateMachine is destroyed
 
-## [0.7.12-beta] - Dec 13, 2023
+## [0.7.13-beta] - Dec 13, 2023
 - Added PortData clone method
+- 
+## [0.7.12-beta] - Dec 13, 2023
+- merged upstream
 
 ## [0.7.11-beta] - Dec 13, 2023
+- merged in upstream fix for runtime checks in the statemachine
 - Made frame delay on transition optional and configurable via the Transition attribute
 
 ## [0.7.10-beta] - Dec 13, 2023
+- merged in upstream hotfix
 - Added additional checks for running in playmode in the statemachine
 
 ## [0.7.9-beta] - Dec 13, 2023
@@ -41,6 +54,10 @@
     unless a colour is passed to the transition attribute
 - Discovered that Jumps can cause stack over flow exceptions so introduced a
     frame delay between transitions to allow the stack to clear
+
+## [0.7.8-beta] - Dec 12, 2023
+- Forked from PaulNonatomic/VisualStateMachine
+- Changed paths to IGB
 
 ## [0.7.7-beta] - Dec 11, 2023
 - Updated the JumpNode to update the valid JumpId's on mouse over and mouse down
