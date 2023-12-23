@@ -167,12 +167,31 @@ namespace VisualStateMachine.Editor.Windows
 		{
 			EditorApplication.update += HandleEditorUpdate;
 			EditorApplication.playModeStateChanged += HandlePlayModeStateChanged;
+			AssemblyReloadEvents.beforeAssemblyReload += HandleBeforeAssemblyReload;
+			AssemblyReloadEvents.afterAssemblyReload += HandleAfterAssemblyReload;
 		}
 
 		private void OnDisable()
 		{
 			EditorApplication.update -= HandleEditorUpdate;
 			EditorApplication.playModeStateChanged -= HandlePlayModeStateChanged;
+			AssemblyReloadEvents.beforeAssemblyReload -= HandleBeforeAssemblyReload;
+			AssemblyReloadEvents.afterAssemblyReload -= HandleAfterAssemblyReload;
+		}
+
+		private void HandleEditorUpdate()
+		{
+			Redraw();
+		}
+
+		private void HandleAfterAssemblyReload()
+		{
+			Redraw();
+		}
+
+		private void HandleBeforeAssemblyReload()
+		{
+			Redraw();
 		}
 
 		private void HandlePlayModeStateChanged(PlayModeStateChange playMode)
@@ -186,7 +205,7 @@ namespace VisualStateMachine.Editor.Windows
 			}
 		}
 
-		private void HandleEditorUpdate()
+		private void Redraw()
 		{
 			if (TryGetStateMachine(out var stateMachine))
 			{

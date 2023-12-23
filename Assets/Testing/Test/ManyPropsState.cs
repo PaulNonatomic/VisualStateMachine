@@ -17,7 +17,7 @@ namespace Testing.Test
 		[SerializeField] private bool _myBool;
 		[SerializeField] private List<int> _myInts;
 		[SerializeField] private ScriptableObject _myNextObject;
-		
+ 		
 		public override void EnterState()
 		{
 			
