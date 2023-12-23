@@ -1,5 +1,5 @@
 {
-    "name": "com.immersivegamebox.statemachine.runtime",
+    "name": "com.nonatomic.statemachine.runtime",
     "rootNamespace": "",
     "references": [],
     "includePlatforms": [],

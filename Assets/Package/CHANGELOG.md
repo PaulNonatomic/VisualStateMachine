@@ -1,5 +1,8 @@
 ﻿# Change Log
 
+## [] - Dec 23, 2023
+- Added State Machine Editor redraw on assembly reload
+
 ## [0.8.5-beta] - Dec 21, 2023
 - Merged in PR from IGB to fix errors being suppressed by not awaiting an async method
 

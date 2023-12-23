@@ -1,5 +1,5 @@
 {
-    "name": "com.immersivegamebox.statemachine.tests.runtime.editmode",
+    "name": "com.nonatomic.statemachine.tests.runtime.editmode",
     "rootNamespace": "",
     "references": [
         "GUID:933b2205b9e1bf44c9cf43214981a083",
