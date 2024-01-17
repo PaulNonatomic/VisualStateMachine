@@ -402,19 +402,23 @@ namespace VisualStateMachine
 		{
 			if (Application.isPlaying) return;
 			
-			var thisPath = AssetDatabase.GetAssetPath(this);
-			var subAssets = AssetDatabase.LoadAllAssetsAtPath(thisPath);
- 
-			for (var i = subAssets.Length - 1; i >= 0; i--) 
+			#if UNITY_EDITOR
 			{
-				if(subAssets[i] != null) continue;
+				var thisPath = AssetDatabase.GetAssetPath(this);
+				var subAssets = AssetDatabase.LoadAllAssetsAtPath(thisPath);
+ 
+				for (var i = subAssets.Length - 1; i >= 0; i--) 
+				{
+					if(subAssets[i] != null) continue;
 			 
-				AssetDatabase.RemoveObjectFromAsset(_references[i]);
-				_references.RemoveAt(i);
-				_nodes.RemoveAt(i);
-			}
+					AssetDatabase.RemoveObjectFromAsset(_references[i]);
+					_references.RemoveAt(i);
+					_nodes.RemoveAt(i);
+				}
 
-			AssetDatabase.SaveAssets();
+				AssetDatabase.SaveAssets();
+			}
+			#endif
 		}
 
 		public void Dispose()

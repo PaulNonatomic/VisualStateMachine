@@ -1,5 +1,8 @@
 ﻿# Change Log
 
+## [0.8.6-beta] - Jan 17, 2023
+- Hit fix for build failure
+
 ## [] - Dec 23, 2023
 - Added State Machine Editor redraw on assembly reload
 
